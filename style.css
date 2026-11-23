@@ -373,16 +373,15 @@ code { background: rgba(0,0,0,0.06); padding: 0 4px; border-radius: 3px; font-si
 .video-wrap {
   position: relative;
   width: 100%;
-  /* Задаём соотношение сторон 16:9 (стандарт для видео) */
+  /* Задаём соотношение сторон 16:9 */
   aspect-ratio: 16 / 9; 
-  /* Если браузер старый и не поддерживает aspect-ratio, можно использовать padding-top: 56.25%; */
-  background-color: #000; /* Чёрный фон, пока видео грузится */
-  border-radius: 8px; /* Скругление углов (по желанию) */
-  overflow: hidden; /* Обрезаем всё, что выходит за края */
+  background-color: #000; /* Чёрный фон, пока грузится */
+  border-radius: 8px; /* Скругление углов */
+  overflow: hidden; /* Обрезаем лишнее */
   margin-bottom: 20px;
 }
 
-/* Сам iframe */
+/* Сам iframe внутри контейнера */
 .video-wrap iframe {
   position: absolute;
   top: 0;
@@ -390,17 +389,4 @@ code { background: rgba(0,0,0,0.06); padding: 0 4px; border-radius: 3px; font-si
   width: 100%;
   height: 100%;
   border: none;
-}
-
-/* Стили для заголовка и подписи (если они потерялись) */
-.section__title {
-  margin-bottom: 20px;
-  font-size: 2rem;
-}
-
-.caption {
-  text-align: center;
-  font-style: italic;
-  margin-top: 15px;
-  color: #666; /* или ваш цвет текста */
 }
