@@ -147,11 +147,11 @@ code { background: rgba(0,0,0,0.06); padding: 0 4px; border-radius: 3px; font-si
   position: relative;
   width: 100%;
   max-width: 900px;
-  margin: 0 auto;
-  aspect-ratio: 16 / 9; /* Держим пропорции */
-  background-color: #000;
+  margin: 0 auto 20px;
+  aspect-ratio: 16 / 9; /* Жёсткие пропорции */
+  background-color: #1f1d1b;
   border-radius: 6px;
-  overflow: hidden;
+  overflow: hidden; /* Скрываем всё лишнее */
 }
 
 .video-wrap iframe {
