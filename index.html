@@ -34,7 +34,25 @@
     </svg>
   </div>
 </header>
-  
+
+<!-- ============== VIDEO ============== -->
+<section class="section" id="video">
+  <h2 class="section-title">Смотреть фильм</h2>
+  <div class="video-wrap">
+    <div class="video-embed">
+      <iframe
+        src="https://yandex.ru/video/preview/9377735501940251711"
+        title="Китбуль / Kitbull — анимационная короткометражка"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+  <p class="caption">В фильме нет слов. Только два взгляда, которые меняют всё.</p>
+</section>
+
 <!-- ============== SYNOPSIS ============== -->
 <section class="section section-alt" id="synopsis">
   <h2 class="section-title">Синопсис</h2>
@@ -49,31 +67,29 @@
 
 <!-- ============== CHARACTERS ============== -->
 <section class="section" id="characters">
-    <h2 class="section-title">Персонажи</h2>
-    <div class="cards">
-      
-      <!-- Карточка Котёнка -->
-      <article class="card">
-        <div class="card-art">
-          <img src="images/cat.png" alt="Котёнок">
-        </div>
-        <h3>Котёнок</h3>
-        <p class="card-quote">«Маленький, но уже научившийся не верить».</p>
-        <p>Вдохновлён детством режиссёра — застенчивой и впечатлительной девочки, которой было трудно идти на контакт.</p>
-      </article>
-  
-      <!-- Карточка Питбуля -->
-      <article class="card">
-        <div class="card-art">
-          <img src="images/dog.png" alt="Питбуль">
-        </div>
-        <h3>Питбуль</h3>
-        <p class="card-quote">«Большой, но ещё не знавший, что такое забота».</p>
-        <p>Его история — о том, что ярлык «бойцовская собака» не определяет, кто ты.</p>
-      </article>
-  
-    </div>
-  </section>
+  <h2 class="section-title">Персонажи</h2>
+  <div class="cards">
+    <!-- Карточка Котёнка -->
+    <article class="card">
+      <div class="card-art">
+        <img src="images/cat.png" alt="Котёнок">
+      </div>
+      <h3>Котёнок</h3>
+      <p class="card-quote">«Маленький, но уже научившийся не верить».</p>
+      <p>Вдохновлён детством режиссёра — застенчивой и впечатлительной девочки, которой было трудно идти на контакт.</p>
+    </article>
+
+    <!-- Карточка Питбуля -->
+    <article class="card">
+      <div class="card-art">
+        <img src="images/dog.png" alt="Питбуль">
+      </div>
+      <h3>Питбуль</h3>
+      <p class="card-quote">«Большой, но ещё не знавший, что такое забота».</p>
+      <p>Его история — о том, что ярлык «бойцовская собака» не определяет, кто ты.</p>
+    </article>
+  </div>
+</section>
 
 <!-- ============== FRIENDSHIP TIMELINE ============== -->
 <section class="section section-alt" id="story">
@@ -81,30 +97,12 @@
   <p class="section-lead">Нажмите на эпизод, чтобы увидеть кадр и заметку художника.</p>
 
   <div class="timeline">
-    <button class="timeline-item" data-ep="0">
-      <span class="timeline-num">1</span>
-      <span class="timeline-label">Настороженность</span>
-    </button>
-    <button class="timeline-item" data-ep="1">
-      <span class="timeline-num">2</span>
-      <span class="timeline-label">Крышка от бутылки</span>
-    </button>
-    <button class="timeline-item" data-ep="2">
-      <span class="timeline-num">3</span>
-      <span class="timeline-label">Игра</span>
-    </button>
-    <button class="timeline-item" data-ep="3">
-      <span class="timeline-num">4</span>
-      <span class="timeline-label">Гроза</span>
-    </button>
-    <button class="timeline-item" data-ep="4">
-      <span class="timeline-num">5</span>
-      <span class="timeline-label">Спасение</span>
-    </button>
-    <button class="timeline-item" data-ep="5">
-      <span class="timeline-num">6</span>
-      <span class="timeline-label">Побег</span>
-    </button>
+    <button class="timeline-item" data-ep="0"><span class="timeline-num">1</span><span class="timeline-label">Настороженность</span></button>
+    <button class="timeline-item" data-ep="1"><span class="timeline-num">2</span><span class="timeline-label">Крышка от бутылки</span></button>
+    <button class="timeline-item" data-ep="2"><span class="timeline-num">3</span><span class="timeline-label">Игра</span></button>
+    <button class="timeline-item" data-ep="3"><span class="timeline-num">4</span><span class="timeline-label">Гроза</span></button>
+    <button class="timeline-item" data-ep="4"><span class="timeline-num">5</span><span class="timeline-label">Спасение</span></button>
+    <button class="timeline-item" data-ep="5"><span class="timeline-num">6</span><span class="timeline-label">Побег</span></button>
   </div>
 
   <div class="timeline-panel" id="timelinePanel">
@@ -120,7 +118,7 @@
 <section class="section" id="gallery">
   <h2 class="section-title">Кадры и эскизы</h2>
   <p class="section-lead">Каждый кадр сначала рисовали вручную, а потом обрабатывали цифрово.</p>
-  <div class="gallery" id="gallery">
+  <div class="gallery">
     <button class="gallery-item" data-frame="1">Эскиз · котёнок в коробке</button>
     <button class="gallery-item" data-frame="2">Раскадровка · первый взгляд</button>
     <button class="gallery-item" data-frame="3">Эскиз · крышка от бутылки</button>
@@ -147,16 +145,10 @@
   <div class="fact">
     <p>🎨 Это один из немногих проектов Pixar, где 2D-стилистика имитирует традиционную рисованную анимацию.</p>
   </div>
-  
-  <!-- Видео в блоке "За кулисами" -->
   <div class="video-wrap">
-    <iframe 
-      src="https://yandex.ru/video/preview/4937863260753841500?utm_source=copy_link&utm_medium=social&utm_campaign=share" 
-      title="Behind the scenes of Kitbull"
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen>
-    </iframe>
+    <div class="video-placeholder">
+      <p>🎥 Здесь можно вставить видео о процессе создания с канала Pixar.</p>
+    </div>
   </div>
 </section>
 
