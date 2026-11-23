@@ -1,3 +1,10 @@
+/* ---------- Сброс отступов (убирает пустоту сверху) ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* ---------- Базовое ---------- */
 :root {
   --paper: #F5F1E8;
@@ -9,8 +16,6 @@
   --ochre: #D4A574;
   --line: #d9d2c2;
 }
-
-* { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
 
@@ -151,7 +156,7 @@ code { background: rgba(0,0,0,0.06); padding: 0 4px; border-radius: 3px; font-si
   aspect-ratio: 16 / 9; /* Жёсткие пропорции */
   background-color: #1f1d1b;
   border-radius: 6px;
-  overflow: hidden; /* Скрываем всё лишнее */
+  overflow: hidden;
 }
 
 .video-wrap iframe {
@@ -163,19 +168,6 @@ code { background: rgba(0,0,0,0.06); padding: 0 4px; border-radius: 3px; font-si
   border: none;
 }
 
-.video-placeholder {
-  aspect-ratio: 16 / 9;
-  background: #1f1d1b;
-  color: var(--paper);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 20px;
-  border-radius: 6px;
-  font-size: 1.05em;
-}
 .caption { text-align: center; font-style: italic; color: var(--graphite-soft); margin-top: 14px; }
 
 /* ---------- CHARACTERS ---------- */
