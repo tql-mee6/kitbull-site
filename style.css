@@ -1,10 +1,3 @@
-/* ---------- Сброс отступов (убирает пустоту сверху) ---------- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 /* ---------- Базовое ---------- */
 :root {
   --paper: #F5F1E8;
@@ -16,6 +9,8 @@
   --ochre: #D4A574;
   --line: #d9d2c2;
 }
+
+* { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
 
@@ -147,28 +142,42 @@ code { background: rgba(0,0,0,0.06); padding: 0 4px; border-radius: 3px; font-si
   max-width: 720px;
 }
 
-/* ---------- VIDEO (ПРАВИЛЬНЫЕ СТИЛИ) ---------- */
-.video-wrap {
+/* ---------- VIDEO ---------- */
+.video-wrap { max-width: 900px; margin: 0 auto; }
+.video-placeholder {
+  aspect-ratio: 16 / 9;
+  background: #1f1d1b;
+  color: var(--paper);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  border-radius: 6px;
+  font-size: 1.05em;
+}
+.caption { text-align: center; font-style: italic; color: var(--graphite-soft); margin-top: 14px; }
+
+/* ---------- Встроенное видео ---------- */
+.video-embed {
   position: relative;
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto 20px;
-  aspect-ratio: 16 / 9; /* Жёсткие пропорции */
-  background-color: #1f1d1b;
+  aspect-ratio: 16 / 9;
   border-radius: 6px;
   overflow: hidden;
+  background: #1f1d1b;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
 
-.video-wrap iframe {
+.video-embed iframe {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  border: none;
+  border: 0;
+  display: block;
 }
-
-.caption { text-align: center; font-style: italic; color: var(--graphite-soft); margin-top: 14px; }
 
 /* ---------- CHARACTERS ---------- */
 .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
@@ -181,16 +190,16 @@ code { background: rgba(0,0,0,0.06); padding: 0 4px; border-radius: 3px; font-si
 }
 .card-art { width: 90px; height: 90px; margin-bottom: 12px; }
 .card-art svg { width: 100%; height: 100%; }
-.card-art img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid var(--line);
-  }
 .card h3 { margin: 0 0 6px; font-size: 1.3em; }
 .card-quote { font-style: italic; color: var(--rose); margin: 0 0 10px; }
 .card p { margin: 0 0 8px; font-size: 0.95em; }
+.card-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+}
 
 /* ---------- TIMELINE ---------- */
 .timeline {
